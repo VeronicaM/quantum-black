@@ -26,14 +26,14 @@ function App() {
     // sum up the values for existing items
     if (labelIndex > -1) {
       const value = Number(state.value) + state.chartValues[labelIndex].value;
-      
+
       updateCharValues.splice(labelIndex, 1, {
         name: state.name,
         value
       });
-      
+
       const updateCharValues = [...state.chartValues];
-      
+
       return setState({ ...defaultState, chartValues: updateCharValues });
     }
 
@@ -69,36 +69,46 @@ function App() {
   const isAddEnabled = Boolean(state.name && state.value);
 
   return <div className="app__container">
-    <form className="c-row">
-      <Input
-        fieldName="name"
-        type="text"
-        inputValue={state.name}
-        touched={state.touched.name}
-        onFieldChanged={handleInput}
-        onBlur={handleTouched}
-      />
+    <header>
+      <h1> Responsive D3 BarChart </h1>
+      <p> Fill in a text as label, e.g. banana, an a positive numberic value, e.g. 100 and press Add once the button becomes enabled. </p>
+    </header>
+    <main>
+      <form className="c-row">
+        <Input
+          fieldName="name"
+          type="text"
+          inputValue={state.name}
+          touched={state.touched.name}
+          onFieldChanged={handleInput}
+          onBlur={handleTouched}
+        />
 
-      <Input
-        fieldName="value"
-        type="number"
-        inputValue={state.value}
-        touched={state.touched.value}
-        onFieldChanged={handleInput}
-        onBlur={handleTouched}
-      />
+        <Input
+          fieldName="value"
+          type="number"
+          inputValue={state.value}
+          touched={state.touched.value}
+          onFieldChanged={handleInput}
+          onBlur={handleTouched}
+        />
 
-      <button
-        type="submit"
-        className="c-cta"
-        onClick={submitForm}
-        disabled={!isAddEnabled}
-      >
-        Add
+        <button
+          type="submit"
+          className="c-cta"
+          onClick={submitForm}
+          disabled={!isAddEnabled}
+        >
+          Add
       </button>
-    </form>
+      </form>
 
-    <BarChart values={state.chartValues} />
+      <BarChart values={state.chartValues} />
+    </main>
+    <footer>
+      Created by @Veronica Mihai 2020 with ☕ and 🎵
+
+    </footer>
   </div>
 };
 

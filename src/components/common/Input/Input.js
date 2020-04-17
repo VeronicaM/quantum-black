@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -19,18 +19,19 @@ function Input({ type, inputValue, touched, fieldName, onFieldChanged, onBlur })
     };
 
     return <div className={fieldClasses}>
-        <label htmlFor={fieldName} className="c-label"> <strong> {fieldName}</strong></label>
-        <input
-            data-testid="custom-input"
-            type={type}
-            name={fieldName}
-            min="0"
-            className="c-input"
-            onBlur={handleBlur}
-            onChange={handleFieldChanged}
-            value={inputValue}
-        />
-        {hasError && <span  data-testid="input-error" className="c-error"> Please fill in {type} for {fieldName} </span>}
+        <label htmlFor={fieldName} className="c-label"> <strong> {fieldName}</strong>
+            <input
+                data-testid="custom-input"
+                type={type}
+                name={fieldName}
+                min="0"
+                className="c-input"
+                onBlur={handleBlur}
+                onChange={handleFieldChanged}
+                value={inputValue}
+            />
+        </label>
+        {hasError && <span data-testid="input-error" className="c-error"> Please fill in {type} for {fieldName} </span>}
     </div>
 };
 
