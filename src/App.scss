@@ -4,5 +4,9 @@
   display: flex;
   flex-direction: column;
   padding: $page-spacing;
+
+  @media screen and (max-width: 768px){
+    padding: $page-spacing-mobile;
+  }
 }
 
