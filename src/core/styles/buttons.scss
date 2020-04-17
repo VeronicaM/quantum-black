@@ -1,0 +1,15 @@
+.c-cta {
+    background-color: $color-brand-light;
+    border-radius: 5px;
+    color: $white;
+    cursor: pointer;
+    font-size: $text-medium;
+    height: 50px;
+    margin-top: 12px;
+    flex: 0 0 100px;
+
+    &:disabled {
+        background-color: $color-dark;
+        cursor: not-allowed;
+    }
+}

@@ -1,0 +1,8 @@
+@import './core/styles/';
+
+.app__container {
+  display: flex;
+  flex-direction: column;
+  padding: $page-spacing;
+}
+

@@ -1,0 +1,28 @@
+$input-gap: 30px;
+
+.c-field {
+    display: flex;
+    flex-direction: column;
+    margin-right: $input-gap;
+    flex: 0 0 200px;
+}
+
+.c-label {
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.c-input {
+    border: solid 1px $black;
+    font-size: $text-medium;
+    padding: 5px;
+}
+
+.c-error {
+    color: $color-tertiary-base;
+
+    & .c-input {
+        border-color: $color-tertiary-base;
+        outline-color: $color-tertiary-base;
+    }
+}
