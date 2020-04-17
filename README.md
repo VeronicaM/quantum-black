@@ -26,11 +26,11 @@ The barchart will be rendered in a random rainbow color.
 - Potentially limit the label character length
 - Potentially set an upper limit for the number value
 - Needs more unit tests
+- Add CI/CD pipeline
 
 **Known issues**
 
-First label doesn't appear as it gets pushed too far right.
-A very large range of values, eg. 0 - 10000, compresses the bars a lot and makes thm unreadable
+  A very large range of values, eg. 0 - 10000, compresses the bars a lot and makes thm unreadable
 
 ## Available Scripts
 
