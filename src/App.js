@@ -7,7 +7,25 @@ import './App.scss';
 
 function App() {
   const defaultState = {
-    chartValues: [],
+    chartValues: [{
+      name: 'banana',
+      value: 20
+    }, {
+      name: 'apple',
+      value: 110
+    }, {
+      name: 'pear',
+      value: 90
+    }, {
+      name: 'orange',
+      value: 50
+    }, {
+      name: 'lemon',
+      value: 200
+    }, {
+      name: 'pineapple',
+      value: 150
+    }],
     name: '',
     value: '',
     touched: {
@@ -27,12 +45,13 @@ function App() {
     if (labelIndex > -1) {
       const value = Number(state.value) + state.chartValues[labelIndex].value;
 
+      const updateCharValues = [...state.chartValues];
+
       updateCharValues.splice(labelIndex, 1, {
         name: state.name,
         value
       });
 
-      const updateCharValues = [...state.chartValues];
 
       return setState({ ...defaultState, chartValues: updateCharValues });
     }
