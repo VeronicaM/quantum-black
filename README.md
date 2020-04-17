@@ -19,13 +19,18 @@ The barchart will be rendered in a random rainbow color.
 - React Testing Library for unit tests
 - D3 for data manipulation.
 
-## Things that can be improved
+## Things that can be improved and known issues
 
 - Improve labels responsive rendering
 - Change the chart orientation on mobile to make it vertical instead of horizontal
-- Limit the label character length
-- Set an upper limit to the value  
-- Add more unit tests
+- Potentially limit the label character length
+- Potentially set an upper limit for the number value
+- Needs more unit tests
+
+**Known issues**
+
+First label doesn't appear as it gets pushed too far right.
+A very large range of values, eg. 0 - 10000, compresses the bars a lot and makes thm unreadable
 
 ## Available Scripts
 
