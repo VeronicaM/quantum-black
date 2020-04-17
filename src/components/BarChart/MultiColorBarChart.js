@@ -125,7 +125,9 @@ export default class ColoredBarChart {
             .append("text")
             .text((d) => d.value)
             .attr("x", (d, i) => {
-                const offset = String(d.value).length + 6;
+                const responsiveOffset = window.innerWidth > 800 ? 7 : 35;
+                console.log('window.innerWidth',window.innerWidth, responsiveOffset);
+                const offset = String(d.value).length + responsiveOffset;
                 return `${this.getResponsiveBarWidth(d.value, offset)}%`
             })
             .attr("y", (d, i) => i * barGap + valueLabelOffsetY)
