@@ -1,0 +1,15 @@
+@import "./../../core/styles/colours.scss";
+
+.barchart__container {
+    height: 50vh;
+    overflow: auto;
+}
+
+.bar__value-label {
+    font-weight: 600;
+}
+
+.bar__name-label {
+    fill: $white;
+    text-transform: capitalize;
+}
