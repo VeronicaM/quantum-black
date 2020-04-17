@@ -24,7 +24,7 @@ let defaultConfig = {
 };
 
 export default class ColoredBarChart {
-    constructor(chartId, values, config) {
+    constructor(chartId, values, config = defaultConfig) {
         this.config = { ...defaultConfig, ...config };
         this.chartId = chartId;
         this.values = values;
@@ -130,7 +130,7 @@ export default class ColoredBarChart {
             })
             .attr("y", (d, i) => i * barGap + valueLabelOffsetY)
             .attr("class", valueLabelClass)
-        
+
         // name labels
         this.svg.selectAll("text.label")
             .data(this.values)
