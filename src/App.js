@@ -52,7 +52,6 @@ function App() {
         value
       });
 
-
       return setState({ ...defaultState, chartValues: updateCharValues });
     }
 
@@ -126,7 +125,6 @@ function App() {
     </main>
     <footer>
       Created by @Veronica Mihai 2020 with ☕ and 🎵
-
     </footer>
   </div>
 };
