@@ -26,6 +26,7 @@ The barchart will be rendered in a random rainbow color.
 - Potentially limit the label character length
 - Potentially set an upper limit for the number value
 - Needs more unit tests
+- Get rid of some of the magic numbers in the responsive calculations for the chart
 - Add CI/CD pipeline
 
 **Known issues**
