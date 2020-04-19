@@ -36,8 +36,9 @@ export default class ColoredBarChart {
     }
 
     renderChart() {
-        this.drawBars()
-        this.addLabels();
+        this
+            .drawBars()
+            .addLabels();
     }
 
     removePreviousChart() {
@@ -102,6 +103,8 @@ export default class ColoredBarChart {
                 const index = Math.round(Math.random() * (colors.length - 1));
                 return colors[index];
             });
+        
+        return this;
     };
 
     addLabels() {
@@ -145,6 +148,8 @@ export default class ColoredBarChart {
             })
             .attr("y", (d, i) => i * barGap + nameLabelOffsetY)
             .attr("class", nameLabelClass)
+        
+        return this;
     }
 
     cleanup() {
